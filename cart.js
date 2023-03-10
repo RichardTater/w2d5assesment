@@ -35,8 +35,10 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((accumulative, current) => accumulative + current.price, 0)
 
+// console.log(summedPrice)
+//DONE:
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,7 +57,12 @@ const cart = [
 
 //CODE HERE
 
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    return ((cartTotal * (1 + tax)) - couponValue)
+}
 
+// console.log(calcFinalPrice(summedPrice, 2, .06))
+//DONE:
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,8 +86,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    //Information that a resturnaunt would like to have about its customers is... Customer's name (string), Customer's age (number), Customer has money (Boolean), Customer total cash avaliable (number)
 */
+
+//DONE:
 
 /*
     Now, create a customer object following your own
@@ -88,3 +97,13 @@ const cart = [
 */
 
 //CODE HERE
+
+const customerLane = {
+    name: 'Lane',
+    age: 30,
+    hasWallet: true,
+    cashAvaliable: 27.92
+}
+
+// console.log(customerLane.hasWallet)
+//DONE:

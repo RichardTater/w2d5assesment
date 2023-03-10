@@ -32,7 +32,14 @@
 
 //CODE HERE
 
-
+pizza = {
+    name: 'Neapolitan',
+    price: 69.00,
+    category: 'entree',
+    popularity: 1, //out of 10
+    rating: 1, //out of 10
+    tags: ['gluten-free','kid-friendly','to-go']
+}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -45,6 +52,8 @@
 //CODE HERE
 
 
+// console.log(pizza.popularity)
+//DONE:
 /*
     Second, log the second tag in your pizza's
     tags array.
@@ -54,6 +63,7 @@
 
 //CODE HERE
 
+console.log(pizza['tags'][1])
 
 /*
     Third, destructure the price off of the

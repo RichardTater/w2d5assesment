@@ -23,9 +23,10 @@
 
 //CODE HERE
 
+const greetUser = (username) => {return `Welcome back, ${username}.`}
 
-
-
+// console.log(greetUser('Lane.Vance'))
+//DONE:
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -50,8 +51,16 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+//FIXME:
+const canWeDeliver = (zipcode) => {
+    if(zipcode.forEach(zipcode) === zipcode){
+        return `You're in our delivery zone!`
+    } else {
+        return `Sorry, we can't deliver to that address`
+    }
+}
 
-
+// console.log(canWeDeliver(deliveryAreaZipCodes))
 
 /* 
     Problem 2 Continued
@@ -107,8 +116,10 @@ const deals = [
 */
 
 //CODE HERE
+//TODO: need to figure out how to use 'replace' vs the dot method. 
 
-
+deals[0].title = '10% Off!'
+console.log(deals[0].title)
 
 /*
     The restaurant is going to continue its
