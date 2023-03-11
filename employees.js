@@ -25,6 +25,7 @@ class Employee {
     constructor(name, shifts){
         this.name = name
         this.shifts = shifts
+        this.salary = 1000
     }
     getSchedule () {
         console.log(`${this.name} works on ${this.shifts}`)
@@ -54,7 +55,7 @@ const empJess = new Employee ('Jess', 'weekday mornings and weekday afternoons')
 
 //CODE HERE
 
-// empJess.getSchedule()
+empJess.getSchedule()
 //DONE:
 
 /*
@@ -70,8 +71,12 @@ const empJess = new Employee ('Jess', 'weekday mornings and weekday afternoons')
 */
 
 //CODE HERE
-//TODO:
-const empNick = empJess
+
+const empNick = {...empJess, name: 'Nick'}
+
+
+// console.log(empNick)
+//DONE:
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -79,7 +84,7 @@ const empNick = empJess
     the Employee class. In the constructor, 
     make sure you require all of the parameters 
     from the Employee class as well as 1 
-    new one: employees, //FIXME:which will be an array of 
+    new one: employees, which will be an array of 
     employees that report to this manager. 
     (Hint: don't forget to call the super function)
 
@@ -88,7 +93,7 @@ const empNick = empJess
     [NAME] manages [EMPLOYEES]
     Where NAME and EMPLOYEES reference the values
     stored on the object.
-//FIXME:
+
     Create a second method called `addEmployee`
     that takes in one argument, `emp`, which
     should be a string of an employee name.
@@ -97,17 +102,17 @@ const empNick = empJess
 */
 
 //CODE HERE
-:FIXME:
+
 class Manager extends Employee {
     constructor (name, shifts, employees){
-    super(name, shifts)
-    this.employees = employees 
+        super(name, shifts)
+        this.employees = employees 
     }
     getEmployees(){
         console.log(`${this.name} manages ${this.employees}`)
     }
     addEmployee(emp){
-        employees.push(emp)
+        this.employees.push(emp)
     }
 }
 
@@ -133,7 +138,7 @@ const manager = new Manager('Winston', 'weekday mornings, weekday afternoons', [
 
 //CODE HERE
 
-getEmployees(manager)
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -143,7 +148,7 @@ getEmployees(manager)
 
 //CODE HERE 
 
-addEmployee('Coach')
+manager.addEmployee('Coach')
 
 /*
     Call the `getEmployees` method on the
@@ -153,4 +158,4 @@ addEmployee('Coach')
 
 //CODE HERE
 
-getEmployees(manager)
+manager.getEmployees()

@@ -51,16 +51,16 @@ const greetUser = (username) => {return `Welcome back, ${username}.`}
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-//FIXME:
+
 const canWeDeliver = (zipcode) => {
-    if(zipcode.forEach(zipcode) === zipcode){
-        return `You're in our delivery zone!`
+    if (deliveryAreaZipCodes.includes(zipcode)){
+        return "You're in our delivery zone!"
     } else {
-        return `Sorry, we can't deliver to that address`
+        return "Sorry, we can't deliver to that address"
     }
 }
+console.log(canWeDeliver(85111))
 
-// console.log(canWeDeliver(deliveryAreaZipCodes))
 
 /* 
     Problem 2 Continued
@@ -81,6 +81,16 @@ const canWeDeliver = (zipcode) => {
 
 // CODE HERE
 
+const canWeDeliver2 = (zipcode) => {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        let zip = deliveryAreaZipCodes[i];
+        if (zipcode === zip) {
+            return "You're in our delivery zone!"
+        } 
+    }
+    
+    return "Sorry, we can't deliver to that address"
+}
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -116,10 +126,10 @@ const deals = [
 */
 
 //CODE HERE
-//TODO: need to figure out how to use 'replace' vs the dot method. 
 
-deals[0].title = '10% Off!'
-console.log(deals[0].title)
+deals[0].title = deals[0].title.replace('15', '10')
+// console.log(deals[0].title)
+
 
 /*
     The restaurant is going to continue its
@@ -135,3 +145,6 @@ console.log(deals[0].title)
 */
 
 //CODE HERE
+
+deals[1].desc = deals[1].desc.replace('March', 'April').trim()
+// console.log(deals[1].desc)

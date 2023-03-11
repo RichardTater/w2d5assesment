@@ -37,7 +37,7 @@ const cart = [
 
 const summedPrice = cart.reduce((accumulative, current) => accumulative + current.price, 0)
 
-// console.log(summedPrice)
+console.log(summedPrice)
 //DONE:
 
 //////////////////PROBLEM 2////////////////////
@@ -61,7 +61,7 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
     return ((cartTotal * (1 + tax)) - couponValue)
 }
 
-// console.log(calcFinalPrice(summedPrice, 2, .06))
+console.log(calcFinalPrice(summedPrice, 2, .06))
 //DONE:
 
 //////////////////PROBLEM 3////////////////////
@@ -105,5 +105,5 @@ const customerLane = {
     cashAvaliable: 27.92
 }
 
-// console.log(customerLane.hasWallet)
+console.log(customerLane.hasWallet)
 //DONE:
